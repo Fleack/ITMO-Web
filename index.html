@@ -5,40 +5,28 @@
     <meta name="keywords" content="компьютер, комплектующие для пк, пк конструктор">
     <meta name="description"
           content="Широкий выбор комплектующих для ПК: процессоры, видеокарты, материнские платы, оперативная память, жесткие диски и SSD, блоки питания, корпуса, системы охлаждения, аксессуары и игровые компоненты.">
-    <title>PCGears - главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>PC Gears - главная</title>
 </head>
 <body>
 <header>
-    <div class="logo">
-        <pre>
-  _____     _____      _____   ______              _____
- |  __ \   / ____|    / ____| |  ____|     /\     |  __ \
- | |__) | | |        | |  __  | |__       /  \    | |__) |
- |  ___/  | |        | | |_ | |  __|     / /\ \   |  _  /
- | |      | |____    | |__| | | |____   / ____ \  | | \ \
- |_|       \_____|    \_____| |______| /_/    \_\ |_|  \_\
-    </pre>
+    <div class="logo"><a href="index.html"><img src="css/img/logo.png" alt="pc gears logo"></a></div>
+    <div class="search">
+        <label for="search"></label>
+        <input type="text" id="search" name="search" placeholder="Поиск по сайту" required minlength="1" maxlength="50" size="60"/>
     </div>
-    <div class="company name">
-        <h1>PCGears</h1>
-    </div>
-    <div class="useful information">
-        <h3>Полезная информация</h3>
-    </div>
-    <nav>
+    <nav class="site-pages">
         <ul>
-            <li>Каталог</li>
-            <li>Доставка</li>
-            <li>Магазины</li>
-            <li>Конструктор</li>
+            <li><a href="#" class="catalog">Каталог</a></li>
+            <li><a href="#" class="delivery">Доставка</a></li>
+            <li><a href="#" class="shops">Магазины</a></li>
+            <li><a href="#" class="constructor">Конструктор</a></li>
         </ul>
     </nav>
 </header>
+
 <main>
-    <aside>
-        <strong>Скидки на кулера!</strong>
-    </aside>
-    <section>
+    <section class="products-filters">
         <h2>Фильтры</h2>
         <ul>
             <li>Цена от:</li>
@@ -50,8 +38,48 @@
             <li>Бесплатный самовывоз</li>
         </ul>
     </section>
-    <section>
-        <h2>Товары</h2>
+
+    <section class="products">
+        <table class="product-table">
+            <thead>
+            <tr>
+                <th>Название товара</th>
+                <th>Цена</th>
+                <th>Дата доставки</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>RTX 4090</td>
+                <td>200000 руб.</td>
+                <td>2023-11-17</td>
+            </tr>
+            <tr>
+                <td>Intel Core i9-12900K</td>
+                <td>95000 руб.</td>
+                <td>2023-11-27</td>
+            </tr>
+            <tr>
+                <td>RTX 4080</td>
+                <td>120000 руб.</td>
+                <td>2023-11-25</td>
+            </tr>
+            <tr>
+                <td>Intel Core i7-7700K</td>
+                <td>42000 руб.</td>
+                <td>2023-11-14</td>
+            </tr>
+            <tr>
+                <td>RAM DDR4 64gb GIGABYTE</td>
+                <td>31000 руб.</td>
+                <td>2023-11-31</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="products-categories">
+        <h2>Категории</h2>
         <ul>
             <li>Процессоры</li>
             <li>Видеокарты</li>
@@ -64,64 +92,18 @@
         </ul>
     </section>
 </main>
+
 <footer>
-    <pre><code>
-// TODO delete me
-if(bool == true)
-{
-    return true;
-}
-else if (bool == false)
-{
-    return false;
-}
-    </code></pre>
-    <p>
-        <q>аиеаэияэио</q> - <cite>Серж Танкян</cite>
-    </p>
-    <p>
-        <q>E = mc<sup>2</sup></q> - <cite>Альберт Эйнштейн</cite>
-    </p>
-    <p>
-        <q>x<sub>1</sub>+x<sub>2</sub>=x<sub>3</sub></q> - На этой формуле математика ломается!!!
-    </p>
-
-    <div class="Lab plan">
-        <h3>План выполнения лабораторной работы:</h3>
+    <section class="contacts">
         <ul>
-            <li>
-                <del datetime="2023-09-09T14:03">Прочитать условие лабораторной работы</del>
-            </li>
-            <li>
-                <del datetime="2023-09-09T14:15">Задать дурацкие вопросы в чате</del>
-            </li>
-            <li>
-                <del datetime="2023-09-09T14:35">Сделать пункт 1 в лабораторной работе</del>
-            </li>
-            <li>
-                <del datetime="2023-09-09T14:47">Сделать пункт 2 в лабораторной работе</del>
-            </li>
-            <li>
-                <del datetime="2023-09-09T15:01">Сделать пункт 3 в лабораторной работе</del>
-            </li>
-            <li>
-                <del datetime="2023-09-09T15:12">Сделать пункт 4 в лабораторной работе</del>
-            </li>
-            <li>
-                <del datetime="2023-09-09T15:21">Сделать пункт 5 в лабораторной работе</del>
-            </li>
-            <li>
-                <del datetime="2023-09-09T15:44">Сделать пункт 6 в лабораторной работе</del>
-            </li>
-            <li>
-                <del datetime="2023-09-09T15:59">Залить лабораторную на GitHub</del>
-            </li>
-            <li>
-                <ins datetime="2023-09-16T13:30-16:50">Защитить лабораторную</ins>
-            </li>
+            <li><i class="phone"></i> +7 (495) 123-45-67</li>
+            <li><i class="email"></i> info@pcgears.ru</li>
         </ul>
-    </div>
-
+    </section>
+    <span class="copyright">
+        &copy; 2023 PC Gears. Все права защищены.
+    </span>
 </footer>
 </body>
+
 </html>
