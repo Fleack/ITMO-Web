@@ -1,4 +1,3 @@
-/* Подключение шрифта Montserrat, если не подключен ранее */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* RESET CSS */
@@ -59,12 +58,11 @@ table {
 /* RESET CSS */
 
 body {
-    margin: 0;
-    min-height: 100vh;
     background-color: #404040;
     color: #E6EFF0;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
+    margin-bottom: 50px;
 }
 
 header {
@@ -77,8 +75,7 @@ main {
     padding-right: 15%;
     padding-top: 30px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
@@ -87,7 +84,13 @@ main {
     width: 100%;
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    float: left;
+}
+
+@media (max-width: 1020px) {
+    .logo {
+        display: none;
+    }
 }
 
 .search {
@@ -103,6 +106,10 @@ main {
     border: none;
     border-radius: 6px;
     font-size: 16px;
+}
+
+#search:focus {
+    outline: none;
 }
 
 .site-pages {
@@ -149,123 +156,87 @@ main {
     margin: -10px;
 }
 
-.constructor-form {
-    max-width: 400px;
-    margin-bottom: 30px;
+@media (max-width: 1020px) {
+    .site-pages li {
+        flex-direction: column;
+    }
 }
 
-.constructor-form h3 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.constructor-form form {
+.products {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
+    overflow-x: auto;
+    width: 100%;
 }
 
-.constructor-form label {
-    margin-top: 10px;
-    font-size: 18px;
+.products .product-table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.constructor-form input,
-.constructor-form select {
-    padding: 10px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-}
-
-.constructor-form button {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #91de18;
-    color: #E6EFF0;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-}
-
-.constructor-form button:hover {
-    background: rgba(141, 204, 136, 0.8);
-    color: #404040;
-}
-
-.generated-table {
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-.generated-table h3 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-#tableContainer {
-    margin-top: 20px;
+.product-table th, .product-table td {
     border: 1px solid #75a926;
-    border-radius: 7px;
-    padding: 15px;
-    background-color: #91de18;
-    color: #404040;
-    display: flex;
-    flex-direction: column;
-}
-
-.table-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 2px solid #75a926;
-}
-
-.table-cell {
-    flex: 1;
+    padding: 10px;
     text-align: center;
+    width: 33.33%;
 }
 
-.table-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #75a926;
-}
-
-.delete-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+.product-table th {
+    background-color: #7b8175;
     color: #E6EFF0;
 }
 
-.delete-button:hover {
-    color: #404040;
+.product-table tr:nth-child(odd) {
+    background-color: #91de18;
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    background-color: #404040;
-    color: #E6EFF0;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px;
-    display: flex;
-    flex-direction: column;
+.products-filters {
+    float: left;
+    margin-right: 20px;
 }
 
-main {
-    flex-grow: 1;
+.products-filters ul {
+    letter-spacing: 0;
+    line-height: 20px;
+    float: left;
 }
 
-.footer-padding {
-    height: 100px;
+.products-filters h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.products-categories {
+    float: left;
+    margin-left: 20px;
+}
+
+.products-categories ul {
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.products-categories h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.constructor {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.constructor h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.constructor p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -273,6 +244,10 @@ footer {
     text-align: center;
     background-color: #292929;
     color: #7D7D7D;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
     line-height: 23px;
 }
 
@@ -283,4 +258,3 @@ footer {
 .copyright {
 
 }
-

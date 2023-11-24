@@ -1,5 +1,5 @@
 (function () {
-    const currentPage = window.location.pathname.substring(10)
+    const currentPage = window.location.pathname.split('/').at(-1)
 
     console.log(currentPage)
 
