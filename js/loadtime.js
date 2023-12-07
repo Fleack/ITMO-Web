@@ -18,7 +18,16 @@
         const formattedTime = formatTime(loadTime);
 
         const statsContainer = document.createElement('div');
-        statsContainer.style.cssText = 'position: fixed; bottom: 75px; left: 0; background-color: #292929; color: #7D7D7D; width: 100%; text-align: center; padding: 10px;';
+        statsContainer.style.cssText = '' +
+            'position: absolute;' +
+            'bottom: 75px;' +
+            'left: 0;' +
+            'background-color: #292929;' +
+            'color: #7D7D7D;' +
+            'width: 100%;' +
+            'text-align: center;' +
+            'padding-top: 10px;' +
+            'padding-bottom: 10px;';
         statsContainer.innerHTML = `Время загрузки страницы: ${formattedTime}`;
 
         document.body.appendChild(statsContainer);
