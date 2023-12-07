@@ -2,19 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="конструктор ПК, сборка ПК">
-    <meta name="description" content="Собери свой идеальный ПК с помощью нашего конструктора.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="конструктор, товары, список желаемого">
+    <meta name="description" content="Конструктор списка желаемого для покупателей.">
     <link rel="stylesheet" href="css/constructor.css">
-    <script src="js/loadtime.js"></script>
-    <script src="js/activePage.js"></script>
-    <title>PC Gears - Конструктор</title>
+    <script src="js/constructor.js" defer></script>
+    <title>PC Gears - Список желаемого</title>
 </head>
 <body>
 <header>
     <div class="logo"><a href="index.html"><img src="css/img/logo.png" alt="pc gears logo"></a></div>
     <div class="search">
         <label for="search"></label>
-        <input type="text" id="search" name="search" placeholder="Поиск по сайту" required minlength="1" maxlength="50" size="60"/>
+        <input type="text" id="search" name="search" placeholder="Поиск по сайту" required minlength="1" maxlength="50"
+               size="60"/>
     </div>
     <nav class="site-pages">
         <ul>
@@ -27,10 +28,35 @@
 </header>
 
 <main>
-    <section class="constructor">
-        <h2>Конструктор ПК</h2>
-        <p>Soon...</p>
-    </section>
+    <div class="constructor-form">
+        <h3>Добавить товар</h3>
+        <form id="productForm">
+            <label for="productName">Название товара:</label>
+            <input type="text" id="productName" name="productName" required minlength="1" maxlength="50">
+
+            <label for="productCategory">Категория товара:</label>
+            <select id="productCategory" name="productCategory">
+                <option value="Процессоры">Процессоры</option>
+                <option value="Видеокарты">Видеокарты</option>
+                <option value="Материнские платы">Материнские платы</option>
+                <option value="Оперативная память">Оперативная память</option>
+                <option value="Диски">Диски</option>
+                <option value="Блоки питания">Блоки питания</option>
+                <option value="Кулера">Кулера</option>
+                <option value="Переферия">Переферия</option>
+            </select>
+
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+
+    <div class="generated-table" id="tableContainer">
+        <div class="table-header">
+            <div class="table-cell">Название товара</div>
+            <div class="table-cell">Категория товара</div>
+            <div class="table-cell">Удалить</div>
+        </div>
+    </div>
 </main>
 
 <footer>
