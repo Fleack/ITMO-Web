@@ -55,7 +55,6 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
 /* RESET CSS */
 
 body {
@@ -148,6 +147,15 @@ main {
     color: #E6EFF0;
 }
 
+.site-pages a.active {
+    background-color: #595959;
+    color: #E6EFF0;
+    border-radius: 7px;
+    display: inline-block;
+    padding: 10px;
+    margin: -10px;
+}
+
 @media (max-width: 1020px) {
     .site-pages li {
         flex-direction: column;
@@ -232,4 +240,46 @@ footer {
 
 .copyright {
 
+}
+
+.delivery-info,
+.shops-info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.delivery-info h2,
+.shops-info h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.delivery-info p,
+.shops-info p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.delivery-info ul,
+.shops-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.delivery-info ul li,
+.shops-info ul li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.delivery-info ul li:before,
+.shops-info ul li:before {
+    content: '\2022';
+    color: #75a926;
+    display: inline-block;
+    font-size: 1.5em;
+    margin-right: 0.5em;
 }
