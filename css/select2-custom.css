@@ -1,0 +1,35 @@
+/* Обертка для стилизации */
+.select2-container {
+    width: 100% !important; /* Ширина 100% */
+}
+
+/* Стили для выпадающего списка */
+.select2-dropdown {
+    border: 1px solid #75a926;
+    border-radius: 7px;
+    background-color: #91de18;
+    color: #404040;
+}
+
+/* Стили для результатов поиска */
+.select2-results__option {
+    padding: 10px;
+    border-bottom: 1px solid #75a926;
+    background-color: #91de18;
+    color: #404040;
+}
+
+/* Стили для выбранного элемента */
+.select2-selection__choice {
+    background-color: #75a926;
+    color: #404040;
+}
+
+/* Стили для поискового поля */
+.select2-search__field {
+    padding: 10px; /* Добавляем отступы, чтобы сделать размер аналогичным полю "название товара" */
+    border: none;
+    border-radius: 6px;
+    background-color: #91de18;
+    color: #404040;
+}

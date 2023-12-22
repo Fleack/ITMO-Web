@@ -5,11 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const savedData = JSON.parse(localStorage.getItem('products')) || [];
     restoreTable(savedData);
 
+    // Инициализация Select2 для поля выбора категории товара
+    $('#productCategory').select2();
+
     productForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
         const productName = document.getElementById('productName').value.trim();
-        const productCategory = document.getElementById('productCategory').value;
+        const productCategory = $('#productCategory').val(); // Используем Select2 для получения значения
 
         if (productName !== '') {
             const product = { name: productName, category: productCategory };
