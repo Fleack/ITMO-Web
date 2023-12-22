@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* RESET CSS */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* RESET CSS */
+
+body {
+    background-color: #404040;
+    color: #E6EFF0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+header {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+main {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    float: left;
+}
+
+@media (max-width: 1020px) {
+    .logo {
+        display: none;
+    }
+}
+
+.search {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#search {
+    padding: 10px;
+    width: 600px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#search:focus {
+    outline: none;
+}
+
+.site-pages {
+    clear: both;
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.site-pages ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.site-pages li {
+    padding: 10px;
+    text-align: center;
+    flex-direction: row;
+    margin: 5px;
+    background: #91de18;
+    border-radius: 7px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.site-pages li:hover {
+    background: rgba(141, 204, 136, 0.16);
+}
+
+.site-pages a {
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 30px;
+    color: #E6EFF0;
+}
+
+.site-pages a.active {
+    background-color: #595959;
+    color: #E6EFF0;
+    border-radius: 7px;
+    display: inline-block;
+    padding: 10px;
+    margin: -10px;
+}
+
+@media (max-width: 1020px) {
+    .site-pages ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-pages li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .site-pages a.active {
+        background-color: #595959;
+        width: 100%;
+        color: #E6EFF0;
+        border-radius: 7px;
+        display: inline-block;
+        padding: 10px;
+        margin: -10px;
+    }
+}
+
+.products {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.products .product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+    border: 1px solid #75a926;
+    padding: 10px;
+    text-align: center;
+    width: 33.33%;
+}
+
+.product-table th {
+    background-color: #7b8175;
+    color: #E6EFF0;
+}
+
+.product-table tr:nth-child(odd) {
+    background-color: #91de18;
+}
+
+.products-filters {
+    float: left;
+    margin-right: 20px;
+}
+
+.products-filters ul {
+    letter-spacing: 0;
+    line-height: 20px;
+    float: left;
+}
+
+.products-filters h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.products-categories {
+    float: left;
+    margin-left: 20px;
+}
+
+.products-categories ul {
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.products-categories h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+footer {
+    padding-top: 10px;
+    text-align: center;
+    background-color: #292929;
+    color: #7D7D7D;
+    width: 100%;
+    height: 75px;
+    line-height: 23px;
+}
+
+.contacts {
+
+}
+
+.copyright {
+
+}
+
+.users-list {
+    margin: 30px auto; /* Установка отступов и автоматическое выравнивание по центру */
+    max-width: 800px; /* Максимальная ширина блока, чтобы избежать излишней ширины на больших экранах */
+}
+
+.users-list h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.users-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.users-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #91de18;
+    border-radius: 7px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.users-list li:hover {
+    background: rgba(141, 204, 136, 0.16);
+}
+
+.preloader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #91de18;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
